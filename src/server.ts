@@ -18,7 +18,7 @@ server.use(express.static(path.join(__dirname, '../public'))); // configura a pa
 server.use(mainRoutes);
 
 server.use((req, res)=> {
-    res.send('Pagina não encontrada!');
+    res.render('pages/404');
 });
 
 server.listen(process.env.PORT); // inicia o servidor
